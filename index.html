@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        padding: 1rem;
+        background: #003577;
+        font-family: 'Source Code Pro', monospace;
+        color: white;
+      }
+
+      form.codeForm {
+        max-width: 100vw;
+        height: 40vh;
+        position: relative;
+      }
+
+      b[data-text='Javascript'] {
+        color: #ffd000;
+      }
+
+      textarea:focus {
+        outline: none;
+      }
+
+      textarea.inputCode {
+        height: 100%;
+        width: 100%;
+        padding: 0.5rem;
+        color: white;
+        border: 2px solid #0057c1;
+        background: #001f44;
+        margin: 0.75rem 0 0.5rem 0;
+      }
+
+      input.submitCode {
+        font-family: 'Source Code Pro', monospace;
+        color: white;
+        padding: 0.5rem;
+        border: 2px solid #0057c1;
+        background: #001f44;
+      }
+    </style>
+    <title>JS Converter</title>
+  </head>
+  <body>
+    <form class="codeForm">
+      <label for="codeToConvert" class="codeLabel"
+        >Input <b data-text="Javascript">Javascript</b> Code:</label
+      >
+      <textarea
+        name="codeInput"
+        id="codeToConvert"
+        cols="30"
+        rows="10"
+        class="inputCode"
+      ></textarea>
+      <input type="submit" value="Convert" class="submitCode" />
+    </form>
+    <script src="./obfuscate.js"></script>
+  </body>
+</html>
