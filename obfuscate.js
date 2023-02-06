@@ -33,7 +33,7 @@ chars.S = `(([]+[])[${fromString('constructor')}])+[]`
 chars.t = `({}+[])[${number(6)}]`
 chars.u = `(!![]+[])[${number(2)}]`
 chars.y = `((+!![]/+[])+[])[${number(7)}]`
-// chars[' '] = `({}+[])[${number(7)}]`
+chars[' '] = `({}+[])[${number(7)}]`
 
 for (const [key, value] of Object.entries(chars)) {
   console.log(`key: '${eval(value)}' \n ${value}`)
